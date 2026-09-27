@@ -1,0 +1,115 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --blueprint-navy: #182882;
+    --blueprint-navy-dark: #121e63;
+    --blueprint-navy-deep: #0e174e;
+    --blueprint-navy-light: #2035a5;
+    --blueprint-navy-lighter: #2a43cf;
+    --coral-accent: #FF5A36;
+    --coral-hover: #ff6f4e;
+    --coral-glow: rgba(255, 90, 54, 0.35);
+    --grid-line: rgba(255, 255, 255, 0.14);
+    --grid-line-subtle: rgba(255, 255, 255, 0.07);
+  }
+
+  body {
+    background-color: var(--blueprint-navy);
+    color: #ffffff;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+}
+
+/* Custom Font Utilities */
+.font-display {
+  font-family: 'Bebas Neue', 'Space Grotesk', sans-serif;
+  letter-spacing: 0.04em;
+}
+
+.font-grotesk {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.font-code {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Blueprint Grid Backgrounds */
+.blueprint-grid {
+  background-color: #182882;
+  background-image: 
+    linear-gradient(var(--grid-line-subtle) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line-subtle) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.blueprint-grid-dense {
+  background-color: #142270;
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.09) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.09) 1px, transparent 1px);
+  background-size: 16px 16px;
+}
+
+/* Diagonal Hatching Pattern for Technical Image Placeholders */
+.blueprint-hatch {
+  background-color: #1b2d91;
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.12),
+    rgba(255, 255, 255, 0.12) 8px,
+    transparent 8px,
+    transparent 16px
+  );
+}
+
+.blueprint-hatch-subtle {
+  background-color: #17267d;
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.07),
+    rgba(255, 255, 255, 0.07) 10px,
+    transparent 10px,
+    transparent 20px
+  );
+}
+
+.blueprint-hatch-coral {
+  background-color: #ff5a36;
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0.2) 6px,
+    transparent 6px,
+    transparent 12px
+  );
+}
+
+/* Blueprint Line & Border Styles */
+.blueprint-border {
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
+.blueprint-border-light {
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #101c57;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2a41b5;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FF5A36;
+}
